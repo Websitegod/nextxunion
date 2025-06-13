@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maths Video Library</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap');
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(to right, #ff758c, #ff7eb3);
+            text-align: center;
+            padding: 20px;
+            color: white;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        .video-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .video-title {
+            background: white;
+            color: #ff4175;
+            padding: 15px;
+            font-size: 20px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 0.3s;
+            font-weight: 600;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .video-title:hover {
+            background: #ff4175;
+            color: white;
+        }
+
+        .video-card {
+            display: none;
+            background: white;
+            color: black;
+            padding: 15px;
+            border-radius: 10px;
+            width: 80%;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        video {
+            width: 100%;
+        }
+    </style>
+
+    <script>
+        document.addEventListener("contextmenu", function(event) {
+            event.preventDefault(); // Disable right-click
+        });
+
+        function showVideo(videoId) {
+            document.getElementById(videoId).style.display = "block";
+        }
+    </script>
+</head>
+<body>
+
+    <h1>Maths Video Library 📚</h1>
+
+    <div class="video-container">
+
+        <div class="video-title" onclick="showVideo('video1')"> L2</div>
+        <div class="video-card" id="video1">
+            <video controls controlslist="nodownload">
+                <source src="Che.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+
+       
+
+       
+
+        
+
+    </div>
+
+</body>
+</html>
