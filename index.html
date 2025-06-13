@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Next union</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(to right, #ff758c, #ff7eb3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            width: 320px;
+            animation: fadeIn 0.8s ease-in-out;
+        }
+
+        h2 {
+            color: #ff4175;
+            font-weight: 700;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 2px solid #ff4175;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+
+        input:focus {
+            border-color: #ff7eb3;
+            outline: none;
+        }
+
+        button {
+            background: #ff4175;
+            color: white;
+            padding: 12px;
+            border: none;
+            width: 100%;
+            border-radius: 8px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: 0.3s;
+            font-weight: 500;
+        }
+
+        button:hover {
+            background: #ff7eb3;
+        }
+
+        .error-message {
+            color: red;
+            font-weight: bold;
+            display: none;
+            margin-top: 10px;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Welcome! 🎉</h2>
+        <form onsubmit="validateForm(event)">
+            <input type="text" id="name" placeholder="Enter Name" required>
+            <input type="number" id="class" placeholder="Enter Class" required>
+            <input type="password" id="password" placeholder="Enter Password" required>
+            <button type="submit">Submit</button>
+            <p id="error" class="error-message">❌ Information is not correct ❌</p>
+        </form>
+    </div>
+<h3>Maked by Prabhat</h3>
+    <script>
+        function validateForm(event) {
+            event.preventDefault();
+
+            let name = document.getElementById("name").value;
+            let userClass = document.getElementById("class").value;
+            let password = document.getElementById("password").value;
+            let errorMessage = document.getElementById("error");
+
+            if (name === "prabhat" && userClass === "10" && password === "holo50") {
+                window.location.href = "prio.html";
+            } else {
+                errorMessage.style.display = "block";
+            }
+        }
+    </script>
+
+</body>
+</html>
